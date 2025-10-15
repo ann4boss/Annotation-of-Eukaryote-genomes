@@ -7,7 +7,7 @@
 #SBATCH --output=./logs/output/%x_%j.o
 #SBATCH --error=./logs/error/%x_%j.e
 
-# User-editable variables
+#*-----Variables---------
 WORKDIR="/data/users/aboss/annotation_of_eukaryote_genome"
 CONTAINER="/data/courses/assembly-annotation-course/CDS_annotation/containers/EDTA2.2.sif"
 INPUT_FASTA="${WORKDIR}/data/hifiasm_assembly_Altai-5.fasta"
