@@ -4,7 +4,7 @@ library(readr)
 library(tidyr)
 
 #==============================================================================
-# SCRIPT: 06_analyze_ltr_clades.R
+# SCRIPT: 07_analyze_ltr_clades.R
 # DESCRIPTION: Reads TEsorter classification tables for Copia and Gypsy,
 #              summarizes the counts and completeness for key clades, and
 #              generates plots for visualization.

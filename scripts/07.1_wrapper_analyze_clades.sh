@@ -9,7 +9,7 @@
 #SBATCH --error=./logs/error/%x_%j.err
 
 #==============================================================================
-# SCRIPT: 06_wrapper_analyze_clades.sh
+# SCRIPT: 07_wrapper_analyze_clades.sh
 # DESCRIPTION: Prepares data and runs the R script (06.2_analyze_ltr_clades.R) to
 #              analyze the clade-level classifications for Copia and Gypsy
 #              elements derived from TEsorter (Step 5). It generates bar plots
@@ -22,10 +22,10 @@
 WORKDIR="/data/users/aboss/annotation_of_eukaryote_genome"
 
 # Directory paths from previous steps
-TESORTER_LIB_DIR="${WORKDIR}/results/05_TEsorter_Library_Clades"
+TESORTER_LIB_DIR="${WORKDIR}/results/06_TEsorter_Library_Clades"
 
 # Dedicated output directory for this step (Step 6)
-ANALYSIS_DIR="${WORKDIR}/results/06_Clade_Distribution_Analysis"
+ANALYSIS_DIR="${WORKDIR}/results/07_Clade_Distribution_Analysis"
 
 # Input files (outputs from Step 5)
 COPIA_CLS_IN="${TESORTER_LIB_DIR}/Copia_sequences.fa.rexdb-plant.cls.tsv"

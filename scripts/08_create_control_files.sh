@@ -8,7 +8,7 @@
 #SBATCH --error=./logs/error/%x_%j.err
 
 #==============================================================================
-# SCRIPT: 07_create_control_files.sh
+# SCRIPT: 08_create_control_files.sh
 # DESCRIPTION: Initializes the MAKER gene annotation pipeline by generating the
 #              default control files (maker_opts.ctl, maker_bopts.ctl, etc.)
 #              These files must be manually configured before running MAKER.
@@ -22,7 +22,7 @@ WORKDIR="/data/users/aboss/annotation_of_eukaryote_genome"
 # Path to the MAKER Apptainer container
 CONTAINER="/data/courses/assembly-annotation-course/CDS_annotation/containers/MAKER_3.01.03.sif"
 # Dedicated output directory for MAKER files
-OUTDIR="${WORKDIR}/results/07_Maker"
+OUTDIR="${WORKDIR}/results/08_Maker"
 
 
 #*-----Prerequisites and Directory Setup---------------------------------------*
