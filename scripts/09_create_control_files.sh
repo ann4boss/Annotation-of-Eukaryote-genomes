@@ -8,7 +8,7 @@
 #SBATCH --error=./logs/error/%x_%j.err
 
 #==============================================================================
-# SCRIPT: 08_create_control_files.sh
+# SCRIPT: 09_create_control_files.sh
 # DESCRIPTION: Initializes the MAKER gene annotation pipeline by generating the
 #              default control files (maker_opts.ctl, maker_bopts.ctl, etc.)
 #              These files must be manually configured before running MAKER.

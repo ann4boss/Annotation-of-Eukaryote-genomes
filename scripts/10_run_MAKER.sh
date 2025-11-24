@@ -10,7 +10,7 @@
 #SBATCH --error=./logs/error/%x_%j.err
 
 #==============================================================================
-# SCRIPT: 09_run_MAKER.sh
+# SCRIPT: 10_run_MAKER.sh
 # DESCRIPTION: Executes the MAKER gene annotation pipeline using MPI for parallel
 #              processing. It uses the configured control files from step 07,
 #              binding necessary software paths (AUGUSTUS, RepeatMasker) and

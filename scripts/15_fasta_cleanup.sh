@@ -9,7 +9,7 @@
 #SBATCH --error=./logs/error/%x_%j.err
 
 #==============================================================================
-# SCRIPT: 14_fasta_cleanup.sh
+# SCRIPT: 15_fasta_cleanup.sh
 # DESCRIPTION: Synchronizes the final GFF3 gene list with the sequence FASTA
 #              files (transcripts and proteins) using faSomeRecords.
 #              This creates the final, ready-to-use FASTA files for annotation.
@@ -19,11 +19,11 @@
 WORKDIR="/data/users/aboss/annotation_of_eukaryote_genome"
 FINAL_DIR="$WORKDIR/results/08_Maker/final"
 
-# GFF file created in Step 13 (containing the final list of genes)
+# GFF file (containing the final list of genes)
 GFF_FINAL_CLEAN="filtered.genes.renamed.gff3"
 
 GENOME_NAME="hifiasm_assembly_Altai-5"
-# Names for the input FASTA files (from MAKER renaming step, e.g., Step 10/11)
+# Names for the input FASTA files (from MAKER renaming step)
 TRANSCRIPT_INPUT_FASTA="${GENOME_NAME}.all.maker.transcripts.fasta.renamed.fasta"
 PROTEIN_INPUT_FASTA="${GENOME_NAME}.all.maker.proteins.fasta.renamed.fasta"
 

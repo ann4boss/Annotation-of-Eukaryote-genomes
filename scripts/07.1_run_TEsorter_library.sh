@@ -9,7 +9,7 @@
 #SBATCH --error=./logs/error/%x_%j.err
 
 #==============================================================================
-# SCRIPT: 06_run_TEsorter_library.sh
+# SCRIPT: 07.1_run_TEsorter_library.sh
 # DESCRIPTION: Refines the classification of the Copia and Gypsy retrotransposon
 #              families from the EDTA-generated TE library. It extracts the
 #              sequences using seqkit and classifies them into clades using

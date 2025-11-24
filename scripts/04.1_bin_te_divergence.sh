@@ -9,7 +9,7 @@
 #SBATCH --error=./logs/error/%x_%j.err
 
 #==============================================================================
-# SCRIPT: 03_bin_te_divergence.sh
+# SCRIPT: 04.1_bin_te_divergence.sh
 # DESCRIPTION: Processes the RepeatMasker output from EDTA to create a binned
 #              data file (TE landscape/age profile) based on divergence.
 # AUTHOR: Anna Boss
@@ -24,6 +24,7 @@ INPUT_FASTA="${WORKDIR}/results/01_EDTA_annotation/hifiasm_assembly_Altai-5.fast
 OUTDIR="${WORKDIR}/results/03_TE_Divergence_Binning"
 # Path to the parsing script
 PARSE_SCRIPT="${WORKDIR}/scripts/parseRM.pl"
+
 
 #*-----Prerequisites and Directory Setup---------------------------------------*
 echo "Loading BioPerl module..."

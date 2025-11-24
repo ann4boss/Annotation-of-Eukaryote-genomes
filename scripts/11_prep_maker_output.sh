@@ -9,7 +9,7 @@
 #SBATCH --error=./logs/error/%x_%j.err
 
 #==============================================================================
-# SCRIPT: 09_prep_maker_output.sh
+# SCRIPT: 11_prep_maker_output.sh
 # DESCRIPTION: Merges the fragmented GFF3, protein, and transcript files generated
 #              by MAKER's parallel datastore into single, consolidated output
 #              files. These merged files are required for the subsequent

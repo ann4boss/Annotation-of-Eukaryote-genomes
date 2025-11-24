@@ -9,7 +9,7 @@
 #SBATCH --error=./logs/error/%x_%j.err
 
 #==============================================================================
-# SCRIPT: 13_quality_filter.sh
+# SCRIPT: 14_quality_filter.sh
 # DESCRIPTION:  This script executes post-MAKER annotation cleanup and quality filtering
 #               using MAKER's utility scripts. It calculates the Annotation Edit Distance (AED)
 #               distribution and filters gene models to retain only those with high confidence
@@ -34,7 +34,7 @@ FINAL_DIR="$MAKER_DIR/final"
 # Base GFF name
 GENOME_NAME="hifiasm_assembly_Altai-5"
 
-# Define Input Files (from Step 11)
+# Define Input Files
 GFF_RENAMED="${GENOME_NAME}.all.maker.noseq.gff.renamed.gff"
 GFF_IPRSCAN_INPUT="${GENOME_NAME}.all.maker.noseq.gff.renamed.iprscan.gff"
 

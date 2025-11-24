@@ -9,7 +9,7 @@
 #SBATCH --error=./logs/error/%x_%j.err
 
 #==============================================================================
-# SCRIPT: 04_wrapper_LTRS_identity.sh
+# SCRIPT: 05.1_wrapper_LTRS_identity.sh
 # DESCRIPTION: Prepares data and runs the R script to visualize the age
 #              distribution of full-length Copia and Gypsy LTR retrotransposons
 #              (LTR-RTs). Age is inferred from the percent identity between the
@@ -34,7 +34,7 @@ GFF_IN="${EDTA_RAW_DIR}/${GENOME_BASE}.mod.LTR.intact.raw.gff3"
 CLS_IN="${TESORTER_DIR}/${GENOME_BASE}.mod.LTR.raw.fa.rexdb-plant.cls.tsv"
 
 # The R plotting script provided by the course
-R_SCRIPT="/data/courses/assembly-annotation-course/CDS_annotation/scripts/02-full_length_LTRs_identity.R"
+R_SCRIPT="${WORKDIR}/scripts/05.2_full_length_LTRs_identity.R"
 
 #*-----Prerequisites and Directory Setup---------------------------------------*
 echo "Setting up analysis directory at $ANALYSIS_DIR"

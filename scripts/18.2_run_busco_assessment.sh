@@ -9,7 +9,7 @@
 #SBATCH --error=./logs/error/%x_%j.err
 
 #==============================================================================
-# SCRIPT: 17_run_busco_assessment.sh
+# SCRIPT: 18.2_run_busco_assessment.sh
 # DESCRIPTION: Executes the BUSCO quality assessment on the longest-isoform
 #              protein and transcript sets using the Brassicales reference
 #              lineage. This step generates a key metric for annotation completeness.

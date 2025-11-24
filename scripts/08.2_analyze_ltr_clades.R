@@ -4,7 +4,7 @@ library(readr)
 library(tidyr)
 
 #==============================================================================
-# SCRIPT: 07_analyze_ltr_clades.R
+# SCRIPT: 08.2_analyze_ltr_clades.R
 # DESCRIPTION: Reads TEsorter classification tables for Copia and Gypsy,
 #              summarizes the counts and completeness for key clades, and
 #              generates plots for visualization.
@@ -52,23 +52,22 @@ message("Summary table created.")
 #-------------------------------------------------------------
 # Plot 1: Barplot (counts per clade, complete vs incomplete)
 #-------------------------------------------------------------
-p1 <- ggplot(summary_tbl, aes(x = reorder(Clade, count, FUN = sum), y = count, fill = Complete)) +
+p1 <- ggplot(summary_tbl, aes(x = reorder(Clade, -count), y = count, fill = Complete)) +
   geom_bar(stat = "identity", position = "stack") +
-  # Reorder Clades within each facet by total count (using tidy eval)
-  facet_wrap(~Superfamily, scales = "free_x") + 
+  facet_wrap(~Superfamily, scales = "free_x") +
   theme_minimal(base_size = 14) +
   labs(
-    title = "Distribution of Major LTR Retrotransposon Clades (Altai-5)",
-    subtitle = "Counts separated by completeness (Total elements: Copia/Gypsy library)",
-    x = "Clade (Ordered by total abundance)",
+    title = "Distribution of Major LTR Retrotransposon Clades",
+    x = "Clade",
     y = "Number of elements",
     fill = "Complete TE"
   ) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
-  scale_fill_manual(values = c("Incomplete" = "#4575b4", "Complete" = "#d73027"))
+  scale_fill_manual(values = c("firebrick", "darkblue"))
 
-ggsave("06_LTR_clade_distribution_barplot.png", p1, width = 10, height = 6, dpi = 300)
-message("Barplot saved: 06_LTR_clade_distribution_barplot.png")
+
+ggsave("07_LTR_clade_distribution_barplot.png", p1, width = 10, height = 6, dpi = 300)
+message("Barplot saved: 07_LTR_clade_distribution_barplot.png")
 
 
 #-------------------------------------------------------------
@@ -96,13 +95,13 @@ p2 <- ggplot(prop_tbl, aes(x = "", y = percentage, fill = Clade)) +
             size = 3.5, 
             color = "black")
 
-ggsave("06_LTR_clade_proportions_piechart.png", p2, width = 10, height = 5, dpi = 300)
+ggsave("07_LTR_clade_proportions_piechart.png", p2, width = 10, height = 5, dpi = 300)
 message("Pie chart saved: 06_LTR_clade_proportions_piechart.png")
 
 
 #-------------------------------------------------------------
 # Summary table export
 #-------------------------------------------------------------
-write_tsv(summary_tbl, "06_LTR_clade_summary_counts.tsv")
-write_tsv(prop_tbl, "06_LTR_clade_proportions.tsv")
+write_tsv(summary_tbl, "07_LTR_clade_summary_counts.tsv")
+write_tsv(prop_tbl, "07_LTR_clade_proportions.tsv")
 message("Summary tables exported.")

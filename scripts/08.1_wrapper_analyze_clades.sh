@@ -9,10 +9,10 @@
 #SBATCH --error=./logs/error/%x_%j.err
 
 #==============================================================================
-# SCRIPT: 07_wrapper_analyze_clades.sh
-# DESCRIPTION: Prepares data and runs the R script (06.2_analyze_ltr_clades.R) to
+# SCRIPT: 08.1_wrapper_analyze_clades.sh
+# DESCRIPTION: Prepares data and runs the R script (07.2_analyze_ltr_clades.R) to
 #              analyze the clade-level classifications for Copia and Gypsy
-#              elements derived from TEsorter (Step 5). It generates bar plots
+#              elements derived from TEsorter. It generates bar plots
 #              and pie charts showing the abundance and proportion of key clades.
 # AUTHOR: Anna Boss
 # DATE: Oct 2025
@@ -40,7 +40,7 @@ mkdir -p "$ANALYSIS_DIR"
 cd "$ANALYSIS_DIR" || exit
 
 # Copy required input classification files to the analysis directory
-echo "Copying input classification tables from Step 5..."
+echo "Copying input classification tables..."
 cp "$COPIA_CLS_IN" .
 cp "$GYPSY_CLS_IN" .
 
@@ -53,7 +53,7 @@ module add R-bundle-Bioconductor/3.18-foss-2021a-R-4.3.2
 
 
 # R script should be saved in the WORKDIR/scripts directory
-R_SCRIPT="${WORKDIR}/scripts/06.2_analyze_ltr_clades.R" 
+R_SCRIPT="${WORKDIR}/scripts/08.2_analyze_ltr_clades.R" 
 echo "Executing R analysis script: $R_SCRIPT"
 
 # Run the R script using Rscript (non-interactive mode)

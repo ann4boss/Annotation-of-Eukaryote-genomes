@@ -9,7 +9,7 @@
 #SBATCH --error=./logs/error/%x_%j.err
 
 #==============================================================================
-# SCRIPT: 12_interproscan_gff_update.sh
+# SCRIPT: 13_interproscan_gff_update.sh
 # DESCRIPTION: Executes InterProScan on the newly renamed protein FASTA file to
 #              find functional domains (e.g., Pfam, InterPro IDs). The resulting
 #              annotations are then integrated back into the GFF3 file for

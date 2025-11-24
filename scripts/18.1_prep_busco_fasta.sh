@@ -9,7 +9,7 @@
 #SBATCH --error=./logs/error/%x_%j.err
 
 #==============================================================================
-# SCRIPT: 16_prep_busco_fasta.sh
+# SCRIPT: 18.1_prep_busco_fasta.sh
 # DESCRIPTION: Filters the high-confidence protein and transcript FASTA files
 #              to retain only the longest isoform for each gene model. This is
 #              the required input format for running a BUSCO quality assessment,

@@ -8,7 +8,7 @@
 #SBATCH --error=./logs/error/%x_%j.err
 
 #==============================================================================
-# SCRIPT: 11_rename_and_map_ids.sh
+# SCRIPT: 12_rename_and_map_ids.sh
 # DESCRIPTION: Creates a consistent and standardized ID map for all MAKER-derived
 #              features (genes, transcripts, proteins). This replaces the long,
 #              internal MAKER IDs with a clean, short prefix (e.g., ALT5000001)
